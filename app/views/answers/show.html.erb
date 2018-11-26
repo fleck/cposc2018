@@ -5,10 +5,5 @@
   <%= @answer.name %>
 </p>
 
-<p>
-  <strong>Poll:</strong>
-  <%= @answer.poll %>
-</p>
-
-<%= link_to 'Edit', edit_answer_path(@answer) %> |
-<%= link_to 'Back', answers_path %>
+<%= link_to 'Edit', edit_poll_answer_path(@poll, @answer) %> |
+<%= link_to 'Back', poll_answers_path(@poll) %>
