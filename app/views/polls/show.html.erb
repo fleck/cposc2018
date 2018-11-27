@@ -4,6 +4,11 @@
   <strong>Name:</strong>
   <%= @poll.name %>
 </p>
+<% if @poll.image.attached? %>
+  <p>
+    <%= image_tag @poll.image.variant(resize: 100) %>
+  </p>
+<% end %>
 <p>
   <%= link_to 'Answers', poll_answers_path(@poll) %>
 </p>
