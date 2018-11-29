@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class PollTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "finding if any answers start with a given letter" do
+    poll = polls(:favorite_system_programming_language)
+
+    assert poll.has_answer_that_starts_with('R')
+  end
 end

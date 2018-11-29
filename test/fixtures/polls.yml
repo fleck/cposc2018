@@ -1,7 +1,4 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-
-two:
-  name: MyString
+favorite_system_programming_language:
+  name: Favorite System Programming Language
