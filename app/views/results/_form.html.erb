@@ -13,17 +13,12 @@
 
   <div class="field">
     <%= form.label :poll_id %>
-    <%= form.text_field :poll_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= collection_select(:result, :poll_id, Poll.all, :id, :name) %>
   </div>
 
   <div class="field">
     <%= form.label :answer_id %>
-    <%= form.text_field :answer_id %>
+    <%= collection_select(:result, :answer_id, Poll.first.answers, :id, :name) %>
   </div>
 
   <div class="actions">

@@ -2,17 +2,17 @@
 
 <p>
   <strong>Poll:</strong>
-  <%= @result.poll %>
+  <%= @result.poll.name %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @result.user %>
+  <%= @result.user.email %>
 </p>
 
 <p>
   <strong>Answer:</strong>
-  <%= @result.answer %>
+  <%= @result.answer.name %>
 </p>
 
 <%= link_to 'Edit', edit_result_path(@result) %> |

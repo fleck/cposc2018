@@ -25,6 +25,7 @@ class ResultsController < ApplicationController
   # POST /results.json
   def create
     @result = Result.new(result_params)
+    @result.user = current_user
 
     respond_to do |format|
       if @result.save
@@ -69,6 +70,6 @@ class ResultsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def result_params
-      params.require(:result).permit(:poll_id, :user_id, :answer_id)
+      params.require(:result).permit(:poll_id, :answer_id)
     end
 end
